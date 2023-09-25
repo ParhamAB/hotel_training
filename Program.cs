@@ -7,7 +7,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var key = Encoding.ASCII.GetBytes(builder.Configuration["JsonWebTokenConfig:Key"]);
+var key = Encoding.ASCII.GetBytes(s: builder.Configuration["JsonWebTokenConfig:Key"] ?? "");
 builder.Services.AddAuthentication(x =>
     {
         x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
