@@ -20,7 +20,7 @@ namespace hotel_training.Services
             _usersDB = usersDB;
         }
 
-        public string GenerateToken(string username)
+        private string GenerateToken(string username)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JsonWebTokenConfig:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
