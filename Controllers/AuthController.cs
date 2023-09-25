@@ -38,7 +38,7 @@ namespace hotel_training.Controllers
             }
         }
 
-        [Authorize]
+
         [HttpPost(Name = "SignUp")]
         public IActionResult SignUp([FromBody] LoginAndSignUpModel model)
         {
