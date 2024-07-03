@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace hotel_training.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("api/[controller]/[action]")]
     public class PlaceController : Controller
